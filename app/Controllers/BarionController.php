@@ -45,6 +45,8 @@ class BarionController extends BaseController
         $psr->PayerHint = "user@example.com";
         $psr->Locale = UILocale::EN;
         $psr->Currency = Currency::HUF;
+        $psr->RedirectUrl = "https://barion.develoweb.hu/orderafterpayment";
+        $psr->CallbackUrl = "https://barion.develoweb.hu/orderprocesspayment";
         $psr->OrderNumber = "ORDER-0001";
         $psr->AddTransaction($trans);
 
